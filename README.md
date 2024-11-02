@@ -60,6 +60,12 @@ reboot
    ```
    sh a
    ```
+# how to set up repeater openwrt
+Network > wireless > scan > join network .
+
+   Attention: this setting
+   ![image](https://github.com/user-attachments/assets/4b3acd3c-fa21-4b0b-9b64-8f1ca23c2b48)
+
 
 # set-up-openwrt-
 
