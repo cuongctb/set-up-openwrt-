@@ -18,7 +18,7 @@ after:
 
 config device
 
-         option name 'phy1-ap0' 
+         option name 'phy0-ap0' 
          
          option ipv6 '0'
 
