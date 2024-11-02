@@ -49,10 +49,15 @@ fi
 sed -i "s/option name 'phy1-sta0'/option name 'phy1-ap0'/g" "$CONFIG_FILE"
 sed -i "s/option name 'phy0-sta0'/option name 'phy0-ap0'/g" "$CONFIG_FILE"
 
+# delete interface 'wan' and 'wan6'
+sed -i "/^config interface 'wan'/,/^config interface /d" $CONFIG_FILE
+sed -i "/^config interface 'wan6'/,/^config interface /d" $CONFIG_FILE
+
 # Reboot
 echo "Done $CONFIG_FILE."
 echo "reboot..."
 reboot
+
 ```
 3. runing
    ```
