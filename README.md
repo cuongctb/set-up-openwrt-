@@ -26,13 +26,14 @@ config device
 
 
 # method 2:
-1. create new file 
+1. disable ipv6 in network > interface > Interfaces and Devices
+2. create new file 
 
 ```
 vi a && chmod +x a
 ```
 
-2. copy text and paste into a.
+3. copy text and paste into a.
 ```
 #!/bin/bash
 
@@ -49,17 +50,13 @@ fi
 sed -i "s/option name 'phy1-sta0'/option name 'phy1-ap0'/g" "$CONFIG_FILE"
 sed -i "s/option name 'phy0-sta0'/option name 'phy0-ap0'/g" "$CONFIG_FILE"
 
-# delete interface 'wan' and 'wan6'
-sed -i "/^config interface 'wan'/,/^config interface /d" $CONFIG_FILE
-sed -i "/^config interface 'wan6'/,/^config interface /d" $CONFIG_FILE
-
 # Reboot
 echo "Done $CONFIG_FILE."
 echo "reboot..."
 reboot
 
 ```
-3. runing
+4. runing
    ```
    sh a
    ```
