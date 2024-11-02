@@ -1,7 +1,7 @@
  # fix ' the_opkg update command failed with_code 6 ' openwrt
  1. network > firewall > General Settings : accept Forward in firewall.
  2. disable ipv6 in network > interface > Interfaces and Devices
- //3. del 'eth0.1' devices ?
+3. del 'eth0.1' devices ?
  4.  
 ```
 vi /etc/config/network && reboot
